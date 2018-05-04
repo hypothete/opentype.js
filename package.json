@@ -30,6 +30,7 @@
     "watch": "rollup -c -w",
     "test": "mocha --require reify --compilers js:buble/register --recursive && jshint . && jscs .",
     "build": "rollup -c",
+    "build-es6": "rollup -c rollup.es6config.js",
     "minify": "uglifyjs --source-map \"url='opentype.min.js.map'\" --compress --mangle --output ./dist/opentype.min.js -- ./dist/opentype.js",
     "dist": "npm run test && npm run build && npm run minify"
   },
